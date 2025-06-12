@@ -1,0 +1,67 @@
+{
+  "productos": [
+    {
+      "id": 4,
+      "nombre": "Jersey de Ciclismo",
+      "descripcion": "Jersey transpirable y aerodinámico para un mejor rendimiento. La mejor indumentaria de primera.",
+      "precio": 13000,
+      "imagen": "/images/jersey.jpeg"
+    },
+    {
+      "id": 5,
+      "nombre": "Calza de Ciclismo",
+      "descripcion": "Calza con badana de gel para mayor comodidad en largas distancias",
+      "precio": 15000,
+      "imagen": "/images/calza.jpeg"
+    },
+    {
+      "id": 6,
+      "nombre": "Guantes de Ciclismo",
+      "descripcion": "Guantes acolchados para mejor agarre y protección",
+      "precio": 6000,
+      "imagen": "/images/guantes.jpeg"
+    },
+    {
+      "id": 7,
+      "nombre": "Lentes Deportivos",
+      "descripcion": "Lentes con protección UV y diseño aerodinámico",
+      "precio": 9000,
+      "imagen": "/images/lente.jpeg"
+    },
+    {
+      "id": 8,
+      "nombre": "Zapatillas de Ciclismo",
+      "descripcion": "Zapatillas con suela rígida para mejor transferencia de potencia",
+      "precio": 25000,
+      "imagen": "/images/zapatilla.jpeg"
+    },
+    {
+      "id": 9,
+      "nombre": "Mochila de Hidratación",
+      "descripcion": "Mochila con sistema de hidratación para largas distancias",
+      "precio": 10000,
+      "imagen": "/images/mochila.jpeg"
+    },
+    {
+      "id": 10,
+      "nombre": "Campera Cortaviento",
+      "descripcion": "Campera ligera y resistente al viento",
+      "precio": 17000,
+      "imagen": "/images/campera.jpeg"
+    },
+    {
+      "id": 11,
+      "nombre": "Asiento Van Halen VAN605 Performance 267x164mm",
+      "descripcion": "*Marca: Van Halen\n*Modelo: VAN605 Performance\n*Material: Cuero Sintético (Eco Cuero)\n*Relleno: Foam\n*Rieles: Acero\n*Usos: Urban / Paseo / Mtb / commuting\n*Canal Antiprostatico\n*Recubrimiento super resistente\n*Perfecto para trayectos medios y largos\n*Dimensiones: 267mm (largo) x 164mm (Ancho)\n*Peso: 470g\n\nVAN605\nEs un asiento orientado a la comodidad gracias a su diseño con canal antiprostático y su generoso relleno de Foam.",
+      "precio": 25000,
+      "imagen": "http://localhost:3001/images/asiento.jpg"
+    },
+    {
+      "id": 12,
+      "nombre": "Asiento MTI",
+      "descripcion": "nuevo asiento MTI",
+      "precio": 245987,
+      "imagen": "/images/MTI_Spear_01.jpg"
+    }
+  ]
+}

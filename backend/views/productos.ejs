@@ -1,0 +1,48 @@
+<%- include('partials/header') %>
+
+<h1 class="text-center mb-4">Catálogo de Productos</h1>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <% productos.forEach(producto => { %>
+  <div class="col">
+    <div class="card h-100">
+      <img
+        src="<%= producto.imagen %>"
+        class="card-img-top"
+        alt="<%= producto.nombre %>"
+      />
+      <div class="card-body">
+        <h5 class="card-title"><%= producto.nombre %></h5>
+        <p class="card-text"><%= producto.descripcion %></p>
+        <p class="card-text">
+          <strong
+            >Precio: $<%= producto.precio.toLocaleString('es-AR') %></strong
+          >
+        </p>
+      </div>
+      <div class="card-footer">
+        <div class="d-flex justify-content-between">
+          <a href="/productos/<%= producto.id %>/editar" class="btn btn-primary"
+            >Editar</a
+          >
+          <form
+            action="/productos/<%= producto.id %>/eliminar"
+            method="POST"
+            style="display: inline"
+          >
+            <button
+              type="submit"
+              class="btn btn-danger"
+              onclick="return confirm('¿Estás seguro de eliminar este producto?')"
+            >
+              Eliminar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% }); %>
+</div>
+
+<%- include('partials/footer') %>

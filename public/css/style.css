@@ -1,0 +1,66 @@
+:root {
+  --color-primary: #ff0000;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-silver: #d3d3d3;
+  --color-dark-red: #8b0000;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f8f9fa;
+}
+
+.navbar {
+  background-color: var(--color-black) !important;
+}
+
+.navbar-brand {
+  color: var(--color-primary) !important;
+  font-weight: bold;
+}
+
+.card {
+  transition: transform 0.3s ease;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-dark-red);
+  border-color: var(--color-dark-red);
+}
+
+.form-control:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25);
+}
+
+footer {
+  background-color: var(--color-black) !important;
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  .card-img-top {
+    height: 150px;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+}

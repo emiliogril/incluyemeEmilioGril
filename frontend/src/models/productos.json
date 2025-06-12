@@ -1,0 +1,60 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Casco Aerodinámico",
+      "descripcion": "Casco de alta calidad con diseño aerodinámico para máximo rendimiento",
+      "precio": 15999.99,
+      "imagen": "/images/casco.jpeg"
+    },
+    {
+      "id": 2,
+      "nombre": "Jersey de Ciclismo",
+      "descripcion": "Jersey transpirable y aerodinámico para un mejor rendimiento",
+      "precio": 12999.99,
+      "imagen": "/images/jersey.jpeg"
+    },
+    {
+      "id": 3,
+      "nombre": "Calza de Ciclismo",
+      "descripcion": "Calza con badana de gel para mayor comodidad en largas distancias",
+      "precio": 14999.99,
+      "imagen": "/images/calza.jpeg"
+    },
+    {
+      "id": 4,
+      "nombre": "Guantes de Ciclismo",
+      "descripcion": "Guantes acolchados para mejor agarre y protección",
+      "precio": 5999.99,
+      "imagen": "/images/guantes.jpeg"
+    },
+    {
+      "id": 5,
+      "nombre": "Lentes Deportivos",
+      "descripcion": "Lentes con protección UV y diseño aerodinámico",
+      "precio": 8999.99,
+      "imagen": "/images/lente.jpeg"
+    },
+    {
+      "id": 6,
+      "nombre": "Zapatillas de Ciclismo",
+      "descripcion": "Zapatillas con suela rígida para mejor transferencia de potencia",
+      "precio": 24999.99,
+      "imagen": "/images/zapatilla.jpeg"
+    },
+    {
+      "id": 7,
+      "nombre": "Mochila de Hidratación",
+      "descripcion": "Mochila con sistema de hidratación para largas distancias",
+      "precio": 9999.99,
+      "imagen": "/images/mochila.jpeg"
+    },
+    {
+      "id": 8,
+      "nombre": "Campera Cortaviento",
+      "descripcion": "Campera ligera y resistente al viento",
+      "precio": 16999.99,
+      "imagen": "/images/campera.jpeg"
+    }
+  ]
+}
