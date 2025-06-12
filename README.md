@@ -74,7 +74,7 @@ El proyecto está dividido en dos partes principales:
 1. **Clonar el repositorio**:
 
    ```
-   git clone https://github.com/tuusuario/incluyeme.git
+   git clone https://github.com/emiliogril/incluyemeEmilioGril.git
    cd incluyeme
    ```
 
