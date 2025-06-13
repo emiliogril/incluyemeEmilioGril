@@ -1,11 +1,9 @@
 import axios from "axios";
 import type { Producto, ProductoInput } from "../types/producto";
 
-const API_URL = "http://localhost:3001";
-
-// Configuración global de axios
+// Usar rutas relativas para que funcione el proxy de Vite
 const axiosInstance = axios.create({
-  baseURL: API_URL,
+  baseURL: "/api",
   withCredentials: false,
   headers: {
     "Content-Type": "application/json",
@@ -33,7 +31,7 @@ export const productoService = {
   obtenerTodos: async (): Promise<Producto[]> => {
     try {
       console.log("Obteniendo todos los productos...");
-      const response = await axiosInstance.get("/api/productos");
+      const response = await axiosInstance.get("/productos");
       console.log("Productos obtenidos:", response.data);
       return response.data;
     } catch (error) {
@@ -44,7 +42,7 @@ export const productoService = {
   obtenerPorId: async (id: number): Promise<Producto> => {
     try {
       console.log(`Obteniendo producto con ID ${id}...`);
-      const response = await axiosInstance.get(`/api/productos/${id}`);
+      const response = await axiosInstance.get(`/productos/${id}`);
       console.log("Producto obtenido:", response.data);
       return response.data;
     } catch (error) {
@@ -55,7 +53,7 @@ export const productoService = {
   crear: async (producto: ProductoInput): Promise<Producto> => {
     try {
       console.log("Creando nuevo producto:", producto);
-      const response = await axiosInstance.post("/api/productos", producto);
+      const response = await axiosInstance.post("/productos", producto);
       console.log("Producto creado:", response.data);
       return response.data;
     } catch (error) {
@@ -69,10 +67,7 @@ export const productoService = {
   ): Promise<Producto> => {
     try {
       console.log(`Actualizando producto ${id}:`, producto);
-      const response = await axiosInstance.put(
-        `/api/productos/${id}`,
-        producto
-      );
+      const response = await axiosInstance.put(`/productos/${id}`, producto);
       console.log("Producto actualizado:", response.data);
       return response.data;
     } catch (error) {
@@ -83,7 +78,7 @@ export const productoService = {
   eliminar: async (id: number): Promise<void> => {
     try {
       console.log(`Eliminando producto ${id}...`);
-      await axiosInstance.delete(`/api/productos/${id}`);
+      await axiosInstance.delete(`/productos/${id}`);
       console.log(`Producto ${id} eliminado correctamente`);
     } catch (error) {
       throw handleError(error);

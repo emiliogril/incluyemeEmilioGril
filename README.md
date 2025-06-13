@@ -96,7 +96,7 @@ El proyecto está dividido en dos partes principales:
 
    ```
    cd ../backend
-   npm run dev
+   node app.js
    ```
 
 5. **Iniciar el frontend (en una nueva terminal)**:

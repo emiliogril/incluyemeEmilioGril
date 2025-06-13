@@ -106,46 +106,15 @@ export const ProductoForm: React.FC<ProductoFormProps> = ({
 
       console.log("Enviando datos del producto:", productoData);
 
-      // Intento crear el producto directamente usando fetch
-      try {
-        console.log(
-          "Haciendo petición POST directa a",
-          `${BACKEND_URL}/api/productos`
+      if (modo === "crear") {
+        const nuevoProductoService = await productoService.crear(productoData);
+        console.log("Producto creado con servicio:", nuevoProductoService);
+      } else if (modo === "editar" && producto) {
+        const productoActualizado = await productoService.actualizar(
+          producto.id,
+          productoData
         );
-        const response = await fetch(`${BACKEND_URL}/api/productos`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(productoData),
-        });
-
-        console.log("Status de la respuesta:", response.status);
-        if (!response.ok) {
-          const errorData = await response.text();
-          console.error("Error del servidor:", errorData);
-          throw new Error(`Error del servidor: ${errorData}`);
-        }
-
-        const nuevoProducto = await response.json();
-        console.log("Producto creado con POST directo:", nuevoProducto);
-
-        // También intentamos con el servicio
-        if (modo === "crear") {
-          const nuevoProductoService = await productoService.crear(
-            productoData
-          );
-          console.log("Producto creado con servicio:", nuevoProductoService);
-        } else if (producto) {
-          const productoActualizado = await productoService.actualizar(
-            producto.id,
-            productoData
-          );
-          console.log("Producto actualizado:", productoActualizado);
-        }
-      } catch (fetchError) {
-        console.error("Error en fetch directo:", fetchError);
-        throw fetchError;
+        console.log("Producto actualizado:", productoActualizado);
       }
 
       navigate("/admin/productos");
